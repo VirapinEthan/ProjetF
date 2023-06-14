@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" th:href="@{/accueil.css}" href="../static/accueil.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="navigation">
+        <a th:href="@{/}">Accueil</a>
+        <a th:href="@{/inscription}">Inscription</a>
+        <a th:href="@{/connexion}">Connexion</a>
+        <a th:href="@{/logout}">Deconnexion</a>
+        <div class="liste-utilisateur" sec:authorize="hasRole('ADMIN')">
+            <a th:href="@{/admin/listUsers}">Liste utilisateur</a>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title">Manga Toshokan</h1>
+            <h2 class="catalogue">Catalogue</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="add-button" sec:authorize="hasRole('ADMIN')">
+                <a th:href="@{/Ajout}">Ajouter</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="liste">
+                <div class="manga" th:each="anime : ${animes}">
+                    <a th:href="@{/page_detail/{id}(id=${anime.id})}">
+                        <p th:text="${anime.titre}">Titre</p>
+                    </a>
+                    <span class="middle-align" sec:authorize="hasRole('ADMIN')">
+                        <form th:action="@{/supprimer_anime/{id}(id=${anime.id})}" method="post">
+                            <button type="submit" class="delete-button">Supprimer</button>
+                        </form>
+                        <div class="edit-button" sec:authorize="hasRole('ADMIN')">
+                            <a th:href="@{/admin/updateAnime/{id}(id=${anime.id})}">Modifier</a>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

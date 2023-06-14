@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des utilisateurs</title>
+    <link rel="stylesheet" th:href="@{/listUsers.css}" href="../../static/listUsers.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="navigation">
+    <a th:href="@{/}">Accueil</a>
+    <a th:href="@{/inscription}">Inscription</a>
+    <a th:href="@{/connexion}">Connexion</a>
+    <a th:href="@{/logout}">Deconnexion</a>
+</div>
+
+<div class="container">
+    <h1 class="text-center">Liste des utilisateurs</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <strong class="d-block text-center">Username</strong>
+
+            <ul class="list-group">
+                <li th:each="user : ${users}" class="list-group-item text-center" th:text="${user.username}"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+

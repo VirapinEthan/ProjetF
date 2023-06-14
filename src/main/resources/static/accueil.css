@@ -1,0 +1,117 @@
+body {
+    background-image: url('Fond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.navigation {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.navigation a {
+    margin-right: 40px;
+    text-decoration: none;
+    color: white;
+}
+
+.liste-utilisateur {
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    align-items: center;
+    color: darkviolet;
+}
+
+.title {
+    text-align: center;
+    font-family: "Irish Grover";
+    font-size: 2em;
+    margin-top: 200px;
+}
+
+.catalogue {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1em;
+    stroke-width: 10px;
+    margin-top: 100px;
+}
+
+.liste {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.liste p {
+    color: white;
+}
+
+.manga {
+    text-align: center;
+}
+
+.manga a {
+    text-decoration: none;
+    color: white;
+}
+
+.manga img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.manga p {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.add-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-button a {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.edit-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-grid;
+}

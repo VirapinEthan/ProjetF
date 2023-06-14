@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="../static/connexion.css" th:href="@{/connexion.css}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="navigation text-center mb-4">
+        <a href="/">Accueil</a>
+        <a href="/inscription">Inscription</a>
+        <a href="/connexion">Connexion</a>
+      </div>
+
+      <h1>Connexion</h1>
+
+      <form th:action="@{/connexion}" th:object="${user}" method="post" class="form-group">
+        <label for="username">Nom d'utilisateur</label>
+        <input type="text" id="username" name="username" th:field="*{username}" class="form-control">
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" th:field="*{password}" class="form-control">
+
+        <div class="submit-button">
+          <button type="submit" class="btn btn-primary">Connexion</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

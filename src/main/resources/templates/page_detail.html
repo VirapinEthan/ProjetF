@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Affichage d'un manga ajouté</title>
+    <link rel="stylesheet" th:href="@{/page_detail.css}" href="../static/page_detail.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="navigation row justify-content-center">
+        <a class="col-auto" th:href="@{/}">Accueil</a>
+        <a class="col-auto" th:href="@{/inscription}">Inscription</a>
+        <a class="col-auto" th:href="@{/connexion}">Connexion</a>
+        <a class="col-auto" th:href="@{/logout}">Deconnexion</a>
+    </div>
+
+    <div class="titre row justify-content-center">
+        <div class="col-auto">
+            <h1>Titre :</h1>
+            <p th:text="${anime.titre}"></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h2>Épisodes :</h2>
+            <p th:text="${anime.episodes}"></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h2>Auteur :</h2>
+            <p th:text="${anime.auteur}"></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h2>Diffusion :</h2>
+            <p th:text="${anime.diffusion}"></p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <h2>Studio d'animation :</h2>
+            <p th:text="${anime.studio}"></p>
+        </div>
+    </div>
+
+    <div class="synopsis row justify-content-center">
+        <div class="col-auto">
+            <h2>Synopsis :</h2>
+            <p th:text="${anime.synopsis}"></p>
+        </div>
+    </div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

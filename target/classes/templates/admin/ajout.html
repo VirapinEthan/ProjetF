@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter un manga</title>
+  <link rel="stylesheet" th:href="@{/ajout.css}" href="../../static/ajout.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="navigation">
+    <a th:href="@{/}">Accueil</a>
+    <a th:href="@{/inscription}">Inscription</a>
+    <a th:href="@{/connexion}">Connexion</a>
+    <a th:href="@{/logout}">Deconnexion</a>
+  </div>
+
+  <h1>Ajouter un manga</h1>
+
+  <form th:action="@{/ajout}" th:object="${anime}" method="post" class="row g-3">
+    <div class="col-md-6">
+      <label for="titre" class="form-label">Titre :</label>
+      <input type="text" id="titre" name="titre" th:field="*{titre}" class="form-control">
+    </div>
+
+    <div class="col-md-6">
+      <label for="episodes" class="form-label">Épisodes :</label>
+      <input type="text" id="episodes" name="episodes" th:field="*{episodes}" class="form-control">
+    </div>
+
+    <div class="col-md-6">
+      <label for="auteur" class="form-label">Auteur :</label>
+      <input type="text" id="auteur" name="auteur" th:field="*{auteur}" class="form-control">
+    </div>
+
+    <div class="col-md-6">
+      <label for="diffusion" class="form-label">Diffusion :</label>
+      <input type="text" id="diffusion" name="diffusion" th:field="*{diffusion}" class="form-control">
+    </div>
+
+    <div class="col-md-6">
+      <label for="studio" class="form-label">Studio d'animation :</label>
+      <input type="text" id="studio" name="studio" th:field="*{studio}" class="form-control">
+    </div>
+
+    <div class="col-12">
+      <label for="synopsis" class="form-label">Synopsis :</label>
+      <textarea id="synopsis" name="synopsis" rows="5" th:field="*{synopsis}" class="form-control"></textarea>
+    </div>
+
+    <div class="col-12">
+      <input type="submit" value="Ajouter" style="background-color: green; color: white;" class="btn btn-success">
+    </div>
+  </form>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

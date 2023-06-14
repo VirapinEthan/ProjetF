@@ -1,0 +1,41 @@
+body {
+    background-image: url('Fond.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+    overflow-y: auto;
+}
+
+.container {
+
+    align-items: center;
+    text-align: center;
+
+}
+
+.navigation {
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.navigation a {
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+.titre {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 30px;
+    color: white;
+}
+
+.synopsis {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2em;
+    color: white;
+}

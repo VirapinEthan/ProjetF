@@ -1,0 +1,55 @@
+body {
+    background-image: url('Fond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.navigation {
+    position: absolute;
+    top: 70px;
+    left: 90px;
+    display: flex;
+    font-size: 1em;
+    font-weight: bold;
+    align-items: center;
+}
+
+.navigation a {
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 200px;
+}
+
+.user-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.col-md-6 {
+    margin-top: 20px;
+}
+
+.list-group {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    text-align: center;
+}
+th.username {
+    padding-right: 20px;
+    margin-right: 50px;
+    text-align: center;
+}
